@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lMt-D5-cde">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qh8-E3-Le4">
+            <objects>
+                <navigationController id="lMt-D5-cde" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="w0b-xh-Yrb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0081654172390699387" green="0.44702106714248657" blue="0.73871308565139771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Zn-LP-ciu" kind="relationship" relationship="rootViewController" id="52C-t4-ewM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1h-fw-d5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="140"/>
+        </scene>
+        <!--News Table View Controller-->
+        <scene sceneID="3Cd-8k-qCi">
+            <objects>
+                <tableViewController storyboardIdentifier="NewsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Zn-LP-ciu" customClass="NewsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rqc-xg-RpT">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NewsTableViewCell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="97" id="Ojl-Di-GPk" customClass="NewsTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="97"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ojl-Di-GPk" id="pBL-UE-l3a">
+                                    <frame key="frameInset" width="342" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microsoft запускает программу совместимости Windows с аксессуарами Xbox One" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZw-Vj-crH">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed, 17 Aug 2016 18:00:36 +0000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBn-6r-82S">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tZw-Vj-crH" firstAttribute="leading" secondItem="XBn-6r-82S" secondAttribute="leading" id="2Kc-Qa-KnX"/>
+                                        <constraint firstItem="tZw-Vj-crH" firstAttribute="leading" secondItem="pBL-UE-l3a" secondAttribute="leadingMargin" id="4Je-we-QKF"/>
+                                        <constraint firstItem="tZw-Vj-crH" firstAttribute="top" secondItem="pBL-UE-l3a" secondAttribute="top" id="DST-Yo-gpP"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tZw-Vj-crH" secondAttribute="bottom" constant="20" id="GtT-DJ-3l2"/>
+                                        <constraint firstItem="XBn-6r-82S" firstAttribute="bottom" secondItem="pBL-UE-l3a" secondAttribute="bottomMargin" id="ho2-Op-5Za"/>
+                                        <constraint firstItem="XBn-6r-82S" firstAttribute="top" secondItem="pBL-UE-l3a" secondAttribute="topMargin" constant="59" id="jCk-Gb-CZY"/>
+                                        <constraint firstItem="tZw-Vj-crH" firstAttribute="trailing" secondItem="XBn-6r-82S" secondAttribute="trailing" id="l6v-UE-aq5"/>
+                                        <constraint firstItem="tZw-Vj-crH" firstAttribute="trailing" secondItem="pBL-UE-l3a" secondAttribute="trailingMargin" id="qvd-Vi-RjX"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelPostDate" destination="XBn-6r-82S" id="OUr-Yv-igl"/>
+                                    <outlet property="labelTitle" destination="tZw-Vj-crH" id="HRY-C0-WTd"/>
+                                    <segue destination="sY0-VF-VX8" kind="show" identifier="newsSegue" id="5gO-cs-7eg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Zn-LP-ciu" id="Drm-cF-L9N"/>
+                            <outlet property="delegate" destination="5Zn-LP-ciu" id="yN9-cU-tWm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="oxN-iF-ebj">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="low-pN-9c2">
+                            <rect key="frame" x="95" y="7" width="186" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Новости"/>
+                                <segment title="Избранное"/>
+                            </segments>
+                            <connections>
+                                <action selector="actionSegmentControll:" destination="5Zn-LP-ciu" eventType="valueChanged" id="smr-kW-swU"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RtO-xF-kmk">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="SegmentControll" destination="low-pN-9c2" id="nTc-xe-g61"/>
+                        <outlet property="refreshView" destination="RtO-xF-kmk" id="lBA-r1-jHp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbA-5f-sXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="139.880059970015"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="nDQ-SO-hUd">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sY0-VF-VX8" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x4u-OL-e0e"/>
+                        <viewControllerLayoutGuide type="bottom" id="whI-X6-UO9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P0U-e9-i2n">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-pU-zy1">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sY0-VF-VX8" id="NvT-ZK-eKu"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cd4-8K-WHA">
+                                <items>
+                                    <barButtonItem systemItem="action" id="eVF-8d-Km8">
+                                        <connections>
+                                            <action selector="actionFavorites:" destination="sY0-VF-VX8" id="0sn-l9-1bm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="NMX-ef-3RI"/>
+                                    <barButtonItem title="Комментарии" id="MzK-LM-bbZ">
+                                        <connections>
+                                            <segue destination="eYR-IE-JDJ" kind="presentation" identifier="commentsSegue" id="rsO-xO-1pX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ckv-pU-zy1" firstAttribute="leading" secondItem="P0U-e9-i2n" secondAttribute="leading" id="6IE-La-hUF"/>
+                            <constraint firstItem="ckv-pU-zy1" firstAttribute="bottom" secondItem="whI-X6-UO9" secondAttribute="top" id="Dpl-1A-Dq7"/>
+                            <constraint firstItem="ckv-pU-zy1" firstAttribute="leading" secondItem="cd4-8K-WHA" secondAttribute="leading" id="GFg-y1-B2Q"/>
+                            <constraint firstItem="ckv-pU-zy1" firstAttribute="top" secondItem="x4u-OL-e0e" secondAttribute="bottom" id="Sm0-gM-L4c"/>
+                            <constraint firstAttribute="trailing" secondItem="ckv-pU-zy1" secondAttribute="trailing" id="iNA-i9-0yh"/>
+                            <constraint firstItem="ckv-pU-zy1" firstAttribute="trailing" secondItem="cd4-8K-WHA" secondAttribute="trailing" id="p4v-n2-5df"/>
+                            <constraint firstItem="cd4-8K-WHA" firstAttribute="bottom" secondItem="whI-X6-UO9" secondAttribute="top" id="vtR-5E-kHl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ckv-pU-zy1" id="bqC-Oa-HWY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LrE-JS-I3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="139.880059970015"/>
+        </scene>
+        <!--Comments View Controller-->
+        <scene sceneID="tEP-D6-EV4">
+            <objects>
+                <viewController storyboardIdentifier="CommentsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eYR-IE-JDJ" customClass="CommentsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3A2-ig-kqf"/>
+                        <viewControllerLayoutGuide type="bottom" id="sfH-fp-fBV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="leN-qZ-BWY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oqS-90-Wpf">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-Sx-SPP">
+                                <items>
+                                    <navigationItem title="Комментарии" id="Qj8-Sq-i5e">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="UzA-rj-VgD">
+                                            <color key="tintColor" red="0.043137254899999998" green="0.41568627450000001" blue="0.71764705880000002" alpha="0.81999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionClose:" destination="eYR-IE-JDJ" id="WkW-7J-dfm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qsp-Sx-SPP" firstAttribute="leading" secondItem="leN-qZ-BWY" secondAttribute="leading" id="65z-DP-yMx"/>
+                            <constraint firstItem="Qsp-Sx-SPP" firstAttribute="leading" secondItem="oqS-90-Wpf" secondAttribute="leading" id="APj-4k-UNd"/>
+                            <constraint firstItem="oqS-90-Wpf" firstAttribute="top" secondItem="Qsp-Sx-SPP" secondAttribute="bottom" id="MVw-yr-inU"/>
+                            <constraint firstItem="Qsp-Sx-SPP" firstAttribute="trailing" secondItem="oqS-90-Wpf" secondAttribute="trailing" id="OUl-Dr-h0O"/>
+                            <constraint firstAttribute="trailing" secondItem="Qsp-Sx-SPP" secondAttribute="trailing" id="ncr-j9-JkF"/>
+                            <constraint firstItem="oqS-90-Wpf" firstAttribute="bottom" secondItem="sfH-fp-fBV" secondAttribute="top" id="oos-v2-Wim"/>
+                            <constraint firstItem="Qsp-Sx-SPP" firstAttribute="top" secondItem="3A2-ig-kqf" secondAttribute="bottom" id="wy8-u3-LeR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="oqS-90-Wpf" id="xEE-6j-wcU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLB-ha-cL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768.8" y="139.880059970015"/>
+        </scene>
+    </scenes>
+</document>
